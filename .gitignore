@@ -1,0 +1,3 @@
+/node_modules
+/database/MySQL.properties.json
+.env
