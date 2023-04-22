@@ -9,7 +9,7 @@ const express = require('express');
 function routerApi(app) {
   const router = express.Router();
   app.use('/api/v1', router);
-  router.use('/users',validateJWT ,usersRouter);
+  router.use('/users',[validateJWT,validateRole] ,usersRouter);
   router.use("/login",loginRouter);
   router.use("/posts",[validateJWT,validateRole],postsRouter);
 }
